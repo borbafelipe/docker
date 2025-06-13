@@ -1,0 +1,14 @@
+{
+    "name": "joaos/meu-mvc",
+    "authors": [
+        {
+            "name": "JoaoSerra",
+            "email": "joaoserrap@hotmail.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {"App\\": "app/" }
+    }
+}

@@ -1,0 +1,31 @@
+version: '3'
+services:
+  php:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www/html
+    tty: true
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_DATABASE: empresta_uf##
+      DB_USER: root
+      DB_PASSWORD: ##########
+    command: bash -c "composer install && php -S 0.0.0.0:8000 -t /var/www/html/public"
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: #######
+      MYSQL_DATABASE: empresta_uf##
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./queries:/docker-entrypoint-initdb.d # Adicionado para executar os arquivos SQL
+    ports:
+      - "3306:3306"
+
+volumes:
+  db_data:
