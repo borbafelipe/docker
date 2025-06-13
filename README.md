@@ -1,4 +1,4 @@
-# ex2024_1_EmprestaCT_UFPB_Alvaro George
+# ex2024_1_EmprestaCT_UF
 
 # Funcionamento
 A aplicação funciona com base em uma arquitetura MVC (Model View Controller). A aplicação inteira é executada dentro do arquivo index.php dentro da pasta public. Os demais arquivos são importados para dentro dela, com base na necessidade. Inicialmente importa o arquivo core.php, e dentro dele é chamado o routes.php. O arquivo routes.php contem um array bi-dimensional, contendo as diferentes path, seus respectivos controllers, e suas actions. Os controllers são objetos, que contem as actions, na forma de método, responsavel por executar cada path.
