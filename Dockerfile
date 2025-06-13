@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y git unzip \
 # Instalar extensões PHP necessárias (incluindo pdo_mysql para conexão com MySQL)
 RUN docker-php-ext-install pdo pdo_mysql
 
-# Copiar o arquivo composer.json e composer.lock (aproveitar cache)
+# Copiar o arquivo composer.json e composer.lock 
 COPY composer.json composer.lock ./
 
 # Instalar dependências do Composer
